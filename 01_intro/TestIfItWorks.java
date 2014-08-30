@@ -6,7 +6,7 @@ public class TestIfItWorks
    {	
       // We jump-start to have a little fun and see what we can do 
       // AND understand in a little while.
-   	// Most/all of this code will be non-sense for you. 
+   	// Most or all of this code might not make sense for right now. 
       // That is ok. You will understand this later.
    
       //show a dialog where user can enter text, and save the text in a variable
