@@ -2,20 +2,19 @@ import javax.swing.JOptionPane;
 
 public class TestIfItWorks
 {
-	public static void main(String[] args)
-	{
-		
+   public static void main(String[] args)
+   {	
       // We jump-start to have a little fun and see what we can do 
       // AND understand in a little while.
-		// Most/all of this code will be non-sense for you. 
+   	// Most/all of this code will be non-sense for you. 
       // That is ok. You will understand this later.
-	
+   
       //show a dialog where user can enter text, and save the text in a variable
-		String name = JOptionPane.showInputDialog("What is your name");
+      String name = JOptionPane.showInputDialog("What is your name");
        
-		// show a Yes, No, Cancel dialog, and save the answer in a variable
-		int likeCake = JOptionPane.showConfirmDialog(null, "Do you like cake " + name); 
-		
+   	// show a Yes, No, Cancel dialog, and save the answer in a variable
+      int likeCake = JOptionPane.showConfirmDialog(null, "Do you like cake " + name); 
+   	
       // print out in console the name
       System.out.println("Your name is: " + name);
       
@@ -23,7 +22,7 @@ public class TestIfItWorks
       if(likeCake == 1)
       {
          // if yes, show a message with OK button
-		   JOptionPane.showMessageDialog(null, name + "!! You must be crazy if you don't like cake"); 		   
+         JOptionPane.showMessageDialog(null, name + "!! You must be crazy if you don't like cake"); 		   
          // print msg in console
          System.out.println("And you don«t like cake?");
       }
@@ -34,6 +33,6 @@ public class TestIfItWorks
          // print msg in console
          System.out.println("And you like cake :)");
       }
-		    
-	} 
+   	    
+   } 
 }
