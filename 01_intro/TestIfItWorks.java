@@ -24,7 +24,7 @@ public class TestIfItWorks
          // if yes, show a message with OK button
          JOptionPane.showMessageDialog(null, name + "!! You must be crazy if you don't like cake"); 		   
          // print msg in console
-         System.out.println("And you don't like cake?");
+         System.out.println("And you do not like cake?");
       }
       else
       {
