@@ -2,13 +2,16 @@ public class Variable
 {
    public static void main(String[] args)
    {
-      // Declarerer variablen
-      int x; // Cammel case
+      // Declare the variable
+      int x;
       
-      // Tildeler en værdi
+      //Declare og assignment kan foregå i en linie
+      // int x = 23;
+      
+      // Tildel variablen en værdi
       x = 23;
       
-      // Bruger vi variable
-      System.out.println("Dette tal er : " + x);
+      // Brug variablen
+      System.out.println("Dette tal er : " + x + " kager");
    }
 }
