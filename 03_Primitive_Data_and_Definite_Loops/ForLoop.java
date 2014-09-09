@@ -6,8 +6,7 @@ public class ForLoop
  
       for(int i = 1; i <= 10; i++)
       {
-         System.out.println(i * 10);
-         i++;
+         System.out.println(i); // evt. i * 10, giver 10 tabel
       }
       
       System.out.println("Mit loop er slut!");
