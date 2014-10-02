@@ -4,49 +4,53 @@ public class MaxMinLoops
    public static void main(String[] args) 
    {
       Scanner console = new Scanner(System.in);
-      unknownRange(console);
+      int max = maxNumber(console);
+      System.out.println("Max number = " + max);
    }
-   public static void maxNumber(Scanner x)
+   public static int maxNumber(Scanner x)
    {
-      // if you know the range 
-      // assign the minimum value to max
-      int max = -273;
-            
-      for(int i = 1; i<=6; i++)
+      int max = -276;
+      
+      for(int i = 1; i <= 6; i++)
       {
-         System.out.print("Temp" + i + "? ");
-         int next = x.nextInt();   
-         if(next > max)
+         int temp = x.nextInt();
+
+         if(temp < -276)
          {
-            max = next;
+            System.out.println("NOOOOO");
+         }
+         else if(temp > max)
+         {
+            max = temp;
          }
          
-      }
+        
+            
       
-      System.out.println("Max number is: " + max);
+      }
+      return max;
    }
+   
    public static void unknownRange(Scanner x)
    {
-      // if you don´t know the range 
-      // assign max with the first value
-      // (obtain the first value outside the loop)
-      System.out.println("Put in 6 numbers and i will tell you the max");
-      System.out.print("Number " + 1 + "? ");
       int max = x.nextInt();
-            
-      for(int i = 2; i<=6; i++)
+      
+      for(int i = 1; i <= 6; i++)
       {
-         System.out.print("Number " + i + "? ");
-         int next = x.nextInt();
-            
-         if(next > max)
+         int temp = x.nextInt();
+         
+         if(temp > max)
          {
-            max = next;
+            max = temp;
          }
-
       }
       
-      System.out.println("Max number is: " + max);
+     printResult(max);
+
+   }
+   public static void printResult(int x)
+   {
+       System.out.println("Max number = " + x);
    }
 
 }
