@@ -15,5 +15,42 @@ public class ExerciseAvgSpeed
       Scanner console = new Scanner(System.in);
       avgSpeed(console);
    }
+   
+   public static void avgSpeed(Scanner x)
+   {
+      int sum = 0;
+      int max = 0;
+      int negatives = 0;
+      
+      for(int i = 0; i < 10; i++)
+      {
+         int temp = x.nextInt();
+         
+         sum = sum + temp;
+         
+         if(temp > max)
+         {
+            max = temp;
+         }
+         
+         if(temp < 0)
+         {
+            negatives++;
+         }
+         
+         
+      }
+      if(negatives > 1)
+      {
+         System.out.println("FAIL");
+      }
+      else
+      {
+         System.out.println("Avg speed = " + sum/10);
+         System.out.println("Max speed = " + max);
+      
+      }
+      
+   }
       
 }
