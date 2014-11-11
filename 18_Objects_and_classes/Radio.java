@@ -5,7 +5,7 @@ public class Radio
    private double frequence;
    private int volume;
    private String color;
-   // public double[] favorite = new double[10];
+   public double[] favorite = new double[100];
    
    // Costructors
    public Radio()
@@ -53,11 +53,6 @@ public class Radio
       frequence = x;
    }
 
-   
-   
-   
-   
-   
    public void power()
    {
       if(isOn == false)
@@ -95,6 +90,34 @@ public class Radio
    {
       frequence = f;
       System.out.println("Frequence: " + frequence);
+   }
+   
+   public void addFavorite(double frequency)
+   {
+      for(int i = 0; i < favorite.length; i++)
+      {
+         if(favorite[i] == 0)
+         {
+            favorite[i] = frequency;
+            i = 200;
+         }
+         
+      }
+ 
+   }
+   public String getFavorites()
+   {
+      String x = "";
+      for(int i = 0; i < favorite.length; i++)
+      {
+         if(favorite[i] != 0)
+         {
+            x += ", " + favorite[i];
+            
+         }
+  
+      }
+      return x;
    }
 
 }
