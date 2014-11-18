@@ -3,6 +3,9 @@ public class Printer extends Machine
    // ******** Fields *************
    private String modelNumber;
    private PaperTray paperTray = new PaperTray();
+   
+   
+   
    // ******** Constructors *************
    public Printer(String modelNumber, boolean isOn)
    {
@@ -24,10 +27,6 @@ public class Printer extends Machine
 
    public void print(int copies)
    {  
-      if(!isOn)
-      { 
-         turnOn();
-      }
       
       while(copies > 0 && !paperTray.isEmpty()) 
       {
