@@ -2,41 +2,36 @@ import java.util.*;
 
 public class ExerciseArrayList1
 {
-   public static void main(String[] args)
+   public static void main(String[] args) throws Exception
    {
+   
+      FileHandling f = new FileHandling(); 
       ArrayList<Integer> lotto = new ArrayList<Integer>();
-      
       Random r = new Random();
       
-//       for(int i = 0; i < 6;i++)
-//       {
-//          int a = r.nextInt(10)+1;
-// 
-//          if(!lotto.contains(a))
-//          {
-//             lotto.add(a);   
-//          }
-//          else
-//          {
-//             i--;
-//          }  
-//       }
-//       
-      int j = 0;
-      while(j < 6)
+      for(int i = 0; i < 6;i++)
       {
-         int a = r.nextInt(10)+1;
+         int a = r.nextInt(100)+1;
 
          if(!lotto.contains(a))
          {
-            lotto.add(a);
-            j++;   
+            lotto.add(a);   
          }
-
+         else
+         {
+            i--;
+         }  
+      }
+      
+      f.writeToFile(lotto);
+     
+      ArrayList<Integer> l = f.readFromFile();
+      
+      for(int i = 0; i < l.size(); i++)
+      {
+         System.out.print(l.get(i) + " ");
       }
       
       
-      System.out.println(lotto);
-
    }
 }
